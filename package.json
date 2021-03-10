@@ -1,0 +1,49 @@
+{
+  "name": "generic-repository-template",
+  "version": "1.0.0",
+  "description": "This project is a bare bones node project that utilizes Typescript as it's main language and Mocha for testing. \r Your tasks are as follows:\r  - Integrate any API of your choice in this repository and re-expose it as an HTTP Endpoint(s). It doesn't matter how big the API is.\r     - Create a documentation of your API wrapper using markdown\r     - Test coverage should be at least 70%\r  - Design a simple API which to manage books in a library.\r     - Document using markdown\r     - No need to code this",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts,.tsx",
+    "coverage": "nyc npm run test",
+    "start": "node index",
+    "server": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heybaton/generic-repository-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heybaton/generic-repository-template/issues"
+  },
+  "homepage": "https://github.com/heybaton/generic-repository-template#readme",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.3",
+    "ts-mocha": "^8.0.0",
+    "ts-node": "^9.1.1",
+    "ts-sinon": "^2.0.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "expressjs": "^1.0.1",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}
